@@ -19,7 +19,7 @@ x_vals = [0]
 y_vals = [0]
 # values for second graph
 y_vals2 = [0]
-SR = 25
+SR = 100
 
 if_start = False
 if_firstStart = True
@@ -39,7 +39,7 @@ def animate(i):
     ax1.cla()
     ax2.cla()
     # Plot new data
-    tamanioVentana = SR * 2
+    tamanioVentana = 50
     
     if(len(x_vals) > tamanioVentana):
         ax1.set_xlim(x_vals[-tamanioVentana], x_vals[-1])
@@ -179,7 +179,7 @@ if __name__  == "__main__":
     #Inicio de la ventana
     window = tk.Tk()
     window.title('Monitor')
-    window.geometry('800x800')
+    window.geometry('600x600')
     creaVentanaPrincipal()
     window.protocol('WM_DELETE_WINDOW', on_closing)
     window.mainloop()
